@@ -1,4 +1,5 @@
-# 🎬 Movie Ticket Booking App (Java – Low Level Design)
+### ⚠️ Note: This is a work-in-progress LLD project. Some features are under active development. 
+# 🎬 Movie Ticket Booking App (Java – Low Level Design) 
 
 A **Java-based Low-Level Design (LLD)** implementation of a **Movie Ticket Booking System**.
 This project focuses on **core domain modeling**, **seat locking**, **show/screen management**, and **in-memory providers**, making it ideal for **LLD interviews, learning system design, and prototyping**.
