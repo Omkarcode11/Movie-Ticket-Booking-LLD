@@ -22,6 +22,8 @@ This project focuses on **core domain modeling**, **seat locking**, **show/scree
 
 ## 🧠 Design Highlights
 
+> 📘 **Deep Dive**: Check out the [ARCHITECTURE.md](ARCHITECTURE.md) for a detailed breakdown of components, flows, and concurrency models.
+
 * Clear separation of concerns:
 
   * **model** – core domain objects
