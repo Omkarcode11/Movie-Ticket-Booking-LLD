@@ -1,5 +1,6 @@
 package model;
 
+import exceptions.InvalidStateException;
 import java.util.*;
 
 public class Booking {
@@ -15,7 +16,8 @@ public class Booking {
         this.show = show;
         this.seatsBooked = seatsBooked;
         this.user = user;
-        this.status = status;
+        this.status = BookingStatus.CREATED;
+
     }
 
     public String getId() {
@@ -36,6 +38,26 @@ public class Booking {
 
     public BookingStatus getStatus() {
         return status;
+    }
+
+    public boolean isConfirmed(){
+        return this.status == BookingStatus.CONFIRM;
+    }
+
+    public void confirmBooking(){
+        if(this.status != BookingStatus.CREATED){
+            throw new InvalidStateException("Booking state is " + this.status);
+        }
+
+        this.status = BookingStatus.CONFIRM;
+    }
+
+    public void expireBooking(){
+        if(this.status != BookingStatus.CREATED){
+            throw new InvalidStateException("Booking status is " + this.status);
+        }
+
+        this.status = BookingStatus.EXPIRED;
     }
 
 }
